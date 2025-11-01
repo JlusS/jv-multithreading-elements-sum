@@ -20,12 +20,11 @@ public class MyTask extends RecursiveTask<Long> {
             for (int i = startPoint; i < finishPoint; i++) {
                 sum += i;
             }
-            System.out.println("Computing sum from " + startPoint + " to " +
-                    (finishPoint - 1) + ": " + sum);
+            System.out.println("Computing sum from " + startPoint + " to "
+                    + (finishPoint - 1) + ": " + sum);
             return sum;
         }
 
-        // Рекурсивный случай: разделяем задачу на подзадачи
         System.out.println("Splitting task: " + startPoint + " to " + finishPoint);
 
         int middle = startPoint + (finishPoint - startPoint) / 2;
